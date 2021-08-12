@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import { Link } from 'gatsby'
 
 import logo from '../images/logo.png'
 
@@ -30,18 +31,18 @@ const Nav = () => {
       </div>
       <div id="nav-menu" className={`navbar-menu ${isMenuActive ? 'is-active' : ''}`}>
         <div className="navbar-start">
-          <a className="navbar-item">
-            Home
-          </a>
-          <a className="navbar-item">
+          <Link className="navbar-item" to="/">
+            HOME
+          </Link>
+          <Link className="navbar-item" to="/works">
             WORKS
-          </a>
-          <a className="navbar-item">
+          </Link>
+          <Link className="navbar-item" to="/sheets">
             SHEETS
-          </a>
-          <a className="navbar-item">
+          </Link>
+          <Link className="navbar-item" to="/links">
             LINKS
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
