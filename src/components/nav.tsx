@@ -13,12 +13,13 @@ const Nav = () => {
   return <>
     <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-          <img
-            className="px-4 py-3"
-            src={logo}
-            alt="凸凹ES"
-            width={180}
-          />
+          <Link className="px-2 pt-2" to="/">
+            <img
+              src={logo}
+              alt="凸凹ES"
+              width={180}
+            />
+          </Link>
         <a
           className={`navbar-burger ${isMenuActive ? 'is-active' : ''}`}
           onClick={onBurgerClicked}

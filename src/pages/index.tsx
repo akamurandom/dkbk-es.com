@@ -3,11 +3,7 @@ import { Link } from 'gatsby'
 
 import './styles.scss'
 import Layout from '../components/layout'
-
-const links = {
-  booth: 'https://dkbk-es.booth.pm/',
-  melon: 'https://www.melonbooks.com/index.php?main_page=maker_info&makers_id=MK0000021467'
-}
+import { links } from '../consts'
 
 const IndexPage = () => {
   return (
@@ -35,10 +31,10 @@ const IndexPage = () => {
           <ul>
             <li>2021/08/12: HPを更新しました。</li>
             <li>
-              <a href={links.booth} target="_blank">BOOTH</a>で東方笛スティバル(プレス盤)を販売中です。
+              <a href={links.booth.home} target="_blank">BOOTH</a>で東方笛スティバル(プレス盤)を販売中です。
             </li>
             <li>
-              <a href={links.melon} target="_blank">メロンブックスDL</a>で過去作品を販売中です。随時追加していきます。
+              <a href={links.melon.home} target="_blank">メロンブックスDL</a>で過去作品を販売中です。随時追加していきます。
             </li>
           </ul>
         </div>
