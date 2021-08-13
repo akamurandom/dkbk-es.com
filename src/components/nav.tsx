@@ -41,9 +41,6 @@ const Nav = () => {
           <Link className="navbar-item" to="/sheets">
             SHEETS
           </Link>
-          <Link className="navbar-item" to="/links">
-            LINKS
-          </Link>
         </div>
       </div>
     </nav>
