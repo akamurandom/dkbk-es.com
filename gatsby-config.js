@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "dkbk-es.com",
+    siteUrl: "https://dkbk-es.com/",
+    title: "凸凹ES",
   },
   plugins: [
     "gatsby-plugin-image",
