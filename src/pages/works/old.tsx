@@ -57,7 +57,7 @@ const works: Work[] = [
   {
     title: '1st grow',
     image: Jaket.firstGrow,
-    description: '例大祭7にて頒布。西方詩神(MUISIN)氏との実験的企画でしたが、本格的なヴォーカルアレンジになりました。サークル名も別になっております。',
+    description: '例大祭7にて頒布。西方詩神氏との実験的企画でしたが、本格的なヴォーカルアレンジになりました。サークル名も別になっております。',
     tracks: '①神さびた古戦場　～ Burst Attacker　②少女が見た妖怪の宴　③厄神の森　④神さびた古戦場　～ Burst Attacker【off vocal】',
     artists: 'アレンジ：西方詩神／ほぃるん、イラスト：音無ミノル'
   },
