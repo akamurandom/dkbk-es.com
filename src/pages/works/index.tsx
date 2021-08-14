@@ -59,7 +59,7 @@ const WorksPage = () => {
           <Link to={work.link}>
             <div className="card my-4">
               <div className="card-content">
-                <div className="columns">
+                <div className="columns is-vcentered">
                   <div className="column is-4">
                     <figure className="image">
                       <img src={work.image} alt={work.title} />

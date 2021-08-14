@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
-import TrackListItem from '../../components/track-list-item'
+import { WorkDetail, TrackListItem, Demo, BackButton } from '../../components/work-detail'
 import { links } from '../../consts'
 import { easterlyStones as image } from '../../images/jaket'
 
@@ -16,25 +15,21 @@ const EasterlyStonesPage = () => {
         description: 'これまでの作品紹介です。'
       }}
     >
-      <section className="section">
-        <h3 className="title is-3">Easterly Stones</h3>
-        <div className="content">
-          <figure className="image mx-0" style={{ maxWidth: 800 }}>
-            <img src={image} alt="Easterly Stones" />
-          </figure>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">初回頒布イベント</h5>
-          <p className="subtitle is-6">例大祭14 (2017/5/7@東京ビッグサイト)</p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">説明</h5>
-          <p className="subtitle is-6">約3年ぶりとなる新譜。スペシャルゲストのMUISINさん (@MUISIN_2016)によるアレンジ2曲に加え、 ほぃるん・あかむらによる打ち込みとリコーダー生演奏の入り乱れた5曲を収録したCDです。</p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">収録曲</h5>
-          <p className="subtitle is-6">
-            <ol>
+      <WorkDetail
+        title="Easterly Stones"
+        image={image}
+        data={[
+          {
+            title: '初回頒布イベント',
+            content: '例大祭14 (2017/5/7@東京ビッグサイト)'
+          },
+          {
+            title: '説明',
+            content: '約3年ぶりとなる新譜。スペシャルゲストのMUISINさん (@MUISIN_2016)によるアレンジ2曲に加え、 ほぃるん・あかむらによる打ち込みとリコーダー生演奏の入り乱れた5曲を収録したCDです。'
+          },
+          {
+            title: '収録曲',
+            content: <ol>
               {[
                 {
                   title: 'シャイニーサニーフレクション',
@@ -58,42 +53,39 @@ const EasterlyStonesPage = () => {
                 },
               ].map(track => <TrackListItem {...track} />)}
             </ol>
-          </p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">頒布価格</h5>
-          <p className="subtitle is-6">300円</p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">アレンジ／演奏</h5>
-          <p className="subtitle is-6">
-            <ul>
-              <li>[Tr.1] アレンジ：ほぃるん</li>
-              <li>[Tr.2] アレンジ／リコーダー：あかむら</li>
-              <li>[Tr.3] アレンジ：MUISIN</li>
-              <li>[Tr.4] アレンジ：西方詩神／MUISIN、詞：MUISIN、ボーカル：佐古友紀</li>
-              <li>[Tr.5] アレンジ／リコーダー：あかむら</li>
+          },
+          {
+            title: '頒布価格',
+            content: '300円'
+          },
+          {
+            title: 'アレンジ／演奏',
+            content: <ul>
+                <li>[Tr.1] アレンジ：ほぃるん</li>
+                <li>[Tr.2] アレンジ／リコーダー：あかむら</li>
+                <li>[Tr.3] アレンジ：MUISIN</li>
+                <li>[Tr.4] アレンジ：西方詩神／MUISIN、詞：MUISIN、ボーカル：佐古友紀</li>
+                <li>[Tr.5] アレンジ／リコーダー：あかむら</li>
             </ul>
-          </p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">ゲスト</h5>
-          <p className="subtitle is-6">MUISIN (<a href={links.twitter.muisin} target="_blank">@MUISIN_2016</a>)</p>
-        </div>
-        <div className="content">
-          <h5 className="title is-5">イラスト</h5>
-          <p className="subtitle is-6">かげ (<a href={links.twitter.kage} target="_blank">@numa_kage</a>)</p>
-        </div>
-      </section>
-      <section className="section">
-        <h4 className="title is-4">デモ</h4>
-        <div dangerouslySetInnerHTML={{ __html: demoIframe }} />
-      </section>
-      <section className="section">
-        <Link to="..">
-          <button className="button">前のページに戻る</button>
-        </Link>
-      </section>
+          },
+          {
+            title: 'ゲスト',
+            content: <>
+              MUISIN (<a href={links.twitter.muisin} target="_blank">@MUISIN_2016</a>)
+            </>
+          },
+          {
+            title: 'イラスト',
+            content: <>
+              かげ (<a href={links.twitter.kage} target="_blank">@numa_kage</a>)
+            </>
+          },
+        ]}
+      />
+      <Demo
+        iframe={demoIframe}
+      />
+      <BackButton />
     </Layout>
   )
 }
