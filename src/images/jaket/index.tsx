@@ -6,8 +6,10 @@ import electoronicMagus from './electronic_magus.jpg'
 import electoronicFairy from './electronic_fairy.jpg'
 import esotericPlus from './esoteric_plus.jpg'
 import extra from './extra.jpg'
-import festivalSheets from './festival_sheets.jpg'
-import festival from './festival.jpg'
+import fuairySheets from './fuairy_sheets.jpg'
+import fuairy from './fuairy.jpg'
+import fuestivalSheets from './fuestival_sheets.jpg'
+import fuestival from './fuestival.jpg'
 import maspa from './maspa.jpg'
 import rikouda from './rikouda.jpg'
 
@@ -20,8 +22,10 @@ export {
   electoronicFairy,
   esotericPlus,
   extra,
-  festivalSheets,
-  festival,
+  fuairySheets,
+  fuairy,
+  fuestivalSheets,
+  fuestival,
   maspa,
   rikouda
 }

@@ -177,15 +177,17 @@ const SheetsPage = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className="section">
         <article className="message is-primary">
           <div className="message-header">
-            <p>楽譜集が販売中です！</p>
+            <p>楽譜集を販売中です！</p>
           </div>
           <div className="message-body">
             <a href={links.booth.home} target="_blank">こちら</a>(BOOTH)からお買い求めいただけます。
           </div>
         </article>
-      </section>      
+      </section>
     </Layout>
   )
 }
