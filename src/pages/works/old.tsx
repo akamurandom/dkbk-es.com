@@ -83,19 +83,19 @@ const OldWorksPage = () => {
         {works.map(work => (
           <div className="card my-4">
             <div className="card-content">
-              <div className="columns is-vcentered">
-                <div className="column is-4">
+              <div className="columns">
+                <div className="column is-3">
                   {work.image ? (
                     <figure className="image">
                       <img src={work.image} alt={work.title} />
                     </figure>
                   ) : (
-                    <div className="has-text-centered">
+                    <div className="has-text-centered py-6">
                       <strong>NO IMAGE</strong>
                     </div>
                   )}
                 </div>
-                <div className="column is-8">
+                <div className="column is-9">
                   <p className="title is-4">{work.title}</p>
                   <p>{work.description}</p>
                   <p className="is-size-7 mt-2">{work.tracks}</p>

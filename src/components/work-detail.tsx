@@ -19,7 +19,7 @@ export const WorkDetail = (props: WorkDetailProps) => {
         <h5 className="subtitle is-5">{props.subtitle}</h5>
       }
       <div className="content">
-        <figure className="image mx-0" style={{ maxWidth: 720 }}>
+        <figure className="image mx-0" style={{ maxWidth: 600 }}>
           <img src={props.image} alt={props.title} />
         </figure>
       </div>

@@ -160,12 +160,12 @@ const SheetsPage = () => {
                         <div className="field is-grouped">
                           {sheet.link.score &&
                             <p className="control">
-                              <a className="button is-link" href={sheet.link.score} download>スコア</a>
+                              <a className="button is-primary" href={sheet.link.score} download>スコア</a>
                             </p>
                           }
                           {sheet.link.part &&
                             <p className="control">
-                              <a className="button is-info" href={sheet.link.part} download>パート譜</a>
+                              <a className="button is-warning" href={sheet.link.part} download>パート譜</a>
                             </p>
                           }
                         </div>
@@ -184,7 +184,14 @@ const SheetsPage = () => {
             <p>楽譜集を販売中です！</p>
           </div>
           <div className="message-body">
-            <a href={links.booth.home} target="_blank">こちら</a>(BOOTH)からお買い求めいただけます。
+            <div className="is-flex is-align-items-center">
+              <div className="is-flex-grow-1">
+                こちらからお買い求めいただけます。
+              </div>
+              <div>
+                <a className="button is-link" href={links.booth.home} target="_blank">BOOTH</a>
+              </div>
+            </div>
           </div>
         </article>
       </section>

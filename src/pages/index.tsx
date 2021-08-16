@@ -29,12 +29,12 @@ const Profile = (props: ProfileProps) => (
   <div className="card my-4">
     <div className="card-content">
       <div className="columns">
-        <div className="column is-4">
-          <figure className="image mx-0" style={{ maxWidth: 300 }}>
+        <div className="column is-3">
+          <figure className="image mx-0">
             <img src={props.image} alt={props.name} />
           </figure>
         </div>
-        <div className="column is-8">
+        <div className="column is-9">
           <p className="title is-5" style={{ color: props.color }}>
             {props.name}
           </p>
@@ -48,7 +48,7 @@ const Profile = (props: ProfileProps) => (
           <article className="message mt-5">
             <div className="message-body">
               <div className="is-flex is-align-items-center">
-                <div>
+                <div className="is-flex-grow-1">
                   {props.external.message}
                 </div>
                 <div className="ml-3">
@@ -109,7 +109,7 @@ const IndexPage = () => {
           <article className="message is-info mt-5">
             <div className="message-body">
               <div className="is-flex is-align-items-center">
-                <div>
+                <div className="is-flex-grow-1">
                   これまでの作品紹介はこちらから。
                 </div>
                 <div className="ml-3">
