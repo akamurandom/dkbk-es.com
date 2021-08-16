@@ -45,7 +45,7 @@ const Profile = (props: ProfileProps) => (
               ))}
             </ul>
           </p>
-          <article className="message mt-5">
+          <article className="message is-link mt-5">
             <div className="message-body">
               <div className="is-flex is-align-items-center">
                 <div className="is-flex-grow-1">

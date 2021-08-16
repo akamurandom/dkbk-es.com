@@ -179,7 +179,7 @@ const SheetsPage = () => {
         </div>
       </section>
       <section className="section">
-        <article className="message is-primary">
+        <article className="message is-link">
           <div className="message-header">
             <p>楽譜集を販売中です！</p>
           </div>

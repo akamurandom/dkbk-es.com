@@ -12,7 +12,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "gh-pages": "gatsby build --prefix-paths && gh-pages -d public",
+    "gh-pages-clean": "rm -rf node_modules/.cache/gh-pages"
   },
   "dependencies": {
     "bulma": "^0.9.3",
