@@ -14,21 +14,23 @@ type WorkDetailProps = {
 export const WorkDetail = (props: WorkDetailProps) => {
   return <>
     <section className="section">
-      <h3 className="title is-3">{props.title}</h3>
-      {props.subtitle &&
-        <h5 className="subtitle is-5">{props.subtitle}</h5>
-      }
-      <div className="content">
-        <figure className="image mx-0" style={{ maxWidth: 600 }}>
-          <img src={props.image} alt={props.title} />
-        </figure>
-      </div>
-      {props.data.map(data => (
+      <div className="container">
+        <h3 className="title is-3">{props.title}</h3>
+        {props.subtitle &&
+          <h5 className="subtitle is-5">{props.subtitle}</h5>
+        }
         <div className="content">
-          <h5 className="title is-5">{data.title}</h5>
-          <p className="subtitle is-6">{data.content}</p>
+          <figure className="image mx-0" style={{ maxWidth: 600 }}>
+            <img src={props.image} alt={props.title} />
+          </figure>
         </div>
-      ))}
+        {props.data.map(data => (
+          <div className="content">
+            <h5 className="title is-5">{data.title}</h5>
+            <p className="subtitle is-6">{data.content}</p>
+          </div>
+        ))}
+      </div>
     </section>
   </>
 }
@@ -56,8 +58,10 @@ type DemoProps = {
 export const Demo = (props: DemoProps) => {
   return <>
     <section className="section">
-      <h4 className="title is-4">{props.title || 'デモ'}</h4>
-      <div dangerouslySetInnerHTML={{ __html: props.iframe }} />
+      <div className="container">
+        <h4 className="title is-4">{props.title || 'デモ'}</h4>
+        <div dangerouslySetInnerHTML={{ __html: props.iframe }} />
+      </div>
     </section>
   </>
 }

@@ -13,7 +13,7 @@ const Nav = () => {
   return <>
     <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-          <Link className="px-2 pt-2" to="/">
+          <Link className="px-3 pt-2" to="/">
             <img
               src={logo}
               alt="凸凹ES"

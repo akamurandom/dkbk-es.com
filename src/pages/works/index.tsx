@@ -53,34 +53,38 @@ const WorksPage = () => {
       }}
     >
       <section className="section">
-        <h3 className="title is-3">これまでの作品</h3>
-        <p className="is-size-7">各アイテムを押下すると詳細ページを表示します。</p>
-        {works.map(work => (
-          <Link to={work.link}>
-            <div className="card my-4">
-              <div className="card-content">
-                <div className="columns">
-                  <div className="column is-3">
-                    <figure className="image">
-                      <img src={work.image} alt={work.title} />
-                    </figure>
-                  </div>
-                  <div className="column is-9">
-                    <p className="title is-4">{work.title}</p>
-                    <p>{work.description}</p>
+        <div className="container">
+          <h3 className="title is-3">これまでの作品</h3>
+          <p className="is-size-7">各アイテムを押下すると詳細ページを表示します。</p>
+          {works.map(work => (
+            <Link to={work.link}>
+              <div className="card my-4">
+                <div className="card-content">
+                  <div className="columns">
+                    <div className="column is-3">
+                      <figure className="image">
+                        <img src={work.image} alt={work.title} />
+                      </figure>
+                    </div>
+                    <div className="column is-9">
+                      <p className="title is-4">{work.title}</p>
+                      <p>{work.description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </section>
       <section className="section">
-        <article className="message is-primary">
-          <div className="message-body">
-            これより古い作品は<Link to="old">こちら</Link>から。
-          </div>
-        </article>
+        <div className="container">
+          <article className="message is-primary">
+            <div className="message-body">
+              これより古い作品は<Link to="old">こちら</Link>から。
+            </div>
+          </article>
+        </div>
       </section>
     </Layout>
   )

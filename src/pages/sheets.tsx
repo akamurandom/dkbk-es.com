@@ -128,72 +128,76 @@ const SheetsPage = () => {
       }}
     >
       <section className="section">
-        <h3 className="title is-3">楽譜置場</h3>
-        <div className="content">
-          <p>管理人の微アレンジによるリコーダーの楽譜とか気まぐれに置いていく予定です。</p>
-          <p>とりあえずいくつか置いとくのでよろしければどうぞ。</p>
-          <article className="message is-small">
-            <div className="message-body">
-              Sn：ソプラニーノリコーダー、S：ソプラノリコーダー、A：アルトリコーダー、T：テナーリコーダー、B：バスリコーダー
-            </div>
-          </article>
-          <div className="box">
-            <div className="table-container">
-              <table className="table is-striped" style={{ minWidth: 1200 }}>
-                <thead>
-                  <tr>
-                    <th>曲名</th>
-                    <th>原曲</th>
-                    <th>編成</th>
-                    <th>コメント</th>
-                    <th>PDF</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sheets.map(sheet => (
+        <div className="container">
+          <h3 className="title is-3">楽譜置場</h3>
+          <div className="content">
+            <p>管理人の微アレンジによるリコーダーの楽譜とか気まぐれに置いていく予定です。</p>
+            <p>とりあえずいくつか置いとくのでよろしければどうぞ。</p>
+            <article className="message is-small">
+              <div className="message-body">
+                Sn：ソプラニーノリコーダー、S：ソプラノリコーダー、A：アルトリコーダー、T：テナーリコーダー、B：バスリコーダー
+              </div>
+            </article>
+            <div className="box">
+              <div className="table-container">
+                <table className="table is-striped" style={{ minWidth: 1200 }}>
+                  <thead>
                     <tr>
-                      <th>{sheet.title}</th>
-                      <td>{sheet.origin}</td>
-                      <td>{sheet.inst}</td>
-                      <td>{sheet.comment}</td>
-                      <td className="is-vcentered">
-                        <div className="field is-grouped">
-                          {sheet.link.score &&
-                            <p className="control">
-                              <a className="button is-primary" href={sheet.link.score} download>スコア</a>
-                            </p>
-                          }
-                          {sheet.link.part &&
-                            <p className="control">
-                              <a className="button is-warning" href={sheet.link.part} download>パート譜</a>
-                            </p>
-                          }
-                        </div>
-                      </td>
+                      <th>曲名</th>
+                      <th>原曲</th>
+                      <th>編成</th>
+                      <th>コメント</th>
+                      <th>PDF</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {sheets.map(sheet => (
+                      <tr>
+                        <th>{sheet.title}</th>
+                        <td>{sheet.origin}</td>
+                        <td>{sheet.inst}</td>
+                        <td>{sheet.comment}</td>
+                        <td className="is-vcentered">
+                          <div className="field is-grouped">
+                            {sheet.link.score &&
+                              <p className="control">
+                                <a className="button is-primary" href={sheet.link.score} download>スコア</a>
+                              </p>
+                            }
+                            {sheet.link.part &&
+                              <p className="control">
+                                <a className="button is-warning" href={sheet.link.part} download>パート譜</a>
+                              </p>
+                            }
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="section">
-        <article className="message is-link">
-          <div className="message-header">
-            <p>楽譜集を販売中です！</p>
-          </div>
-          <div className="message-body">
-            <div className="is-flex is-align-items-center">
-              <div className="is-flex-grow-1">
-                こちらからお買い求めいただけます。
-              </div>
-              <div>
-                <a className="button is-link" href={links.booth.home} target="_blank">BOOTH</a>
+        <div className="container">
+          <article className="message is-link">
+            <div className="message-header">
+              <p>楽譜集を販売中です！</p>
+            </div>
+            <div className="message-body">
+              <div className="is-flex is-align-items-center">
+                <div className="is-flex-grow-1">
+                  こちらからお買い求めいただけます。
+                </div>
+                <div>
+                  <a className="button is-link" href={links.booth.home} target="_blank">BOOTH</a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
     </Layout>
   )
