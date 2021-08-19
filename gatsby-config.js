@@ -3,7 +3,6 @@ module.exports = {
     siteUrl: "https://dkbk-es.com/",
     title: "凸凹ES",
   },
-  pathPrefix: "/dkbk-es.com",
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
